@@ -9,8 +9,8 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="这是第一个测试博文">
-<title>这是第一个测试博文</title>
+<meta name="description" content="go mod 依赖管理">
+<title>go mod 依赖管理</title>
 
 
 </head>
@@ -41,7 +41,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">这是第一个测试博文</h1>
+<h1 class="postTitle">go mod 依赖管理</h1>
 <div class="title-right">
     
     <a href="https://jiaokang.github.io"><button id="buttonHome" class="btn btn-invisible circle" title="首页">
@@ -51,7 +51,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </button></a>
 
     
-    <a href="https://github.com/jiaokang/jiaokang.github.io/issues/2" target="_blank"><button class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/jiaokang/jiaokang.github.io/issues/3" target="_blank"><button class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -67,7 +67,38 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>这是第一个测试博文</p></div>
+<div class="markdown-body" id="postBody"><h2>进入到目录中 go mod init {项目名} 来初始化go项目,并生成go.mod文件</h2>
+<h3>go.mod用来管理依赖</h3>
+<pre class="notranslate"><code class="notranslate">// 模块名
+module gomod
+// sdk版本
+go 1.22.1
+
+// 当前module项目依赖的包
+require(
+ // dependency latest
+)
+
+// 排除第三方包
+exclude(
+// dependency latest
+)
+
+// 修改依赖包的路径或者版本
+// 当依赖包发生迁移
+// 原始包无法访问
+// 二次开发第三方包
+replace(
+ // source latest =&gt; target latest
+)
+
+// 撤回
+// 当前项目作为其他项目的依赖,如果说某个版本出现了问题
+// 可以通过retract撤回
+retract(
+ // v1.0.0
+)
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>

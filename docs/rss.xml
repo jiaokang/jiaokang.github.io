@@ -1,2 +1,34 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>老弟's Blog</title><link>https://jiaokang.github.io</link><description>Blog description</description><copyright>老弟's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://jiaokang.github.io</link></image><lastBuildDate>Tue, 26 Mar 2024 09:45:37 +0000</lastBuildDate><managingEditor>老弟's Blog</managingEditor><ttl>60</ttl><webMaster>老弟's Blog</webMaster><item><title>这是第一个测试博文</title><link>https://jiaokang.github.io/post/zhe-shi-di-yi-ge-ce-shi-bo-wen.html</link><description>这是第一个测试博文。</description><guid isPermaLink="true">https://jiaokang.github.io/post/zhe-shi-di-yi-ge-ce-shi-bo-wen.html</guid><pubDate>Tue, 26 Mar 2024 09:34:47 +0000</pubDate></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>老弟's Blog</title><link>https://jiaokang.github.io</link><description>Blog description</description><copyright>老弟's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://jiaokang.github.io</link></image><lastBuildDate>Tue, 02 Apr 2024 16:15:05 +0000</lastBuildDate><managingEditor>老弟's Blog</managingEditor><ttl>60</ttl><webMaster>老弟's Blog</webMaster><item><title>go mod 依赖管理</title><link>https://jiaokang.github.io/post/go%20mod%20-yi-lai-guan-li.html</link><description>## 进入到目录中 go mod init {项目名} 来初始化go项目,并生成go.mod文件&#13;
+### go.mod用来管理依赖&#13;
+```&#13;
+// 模块名&#13;
+module gomod&#13;
+// sdk版本&#13;
+go 1.22.1&#13;
+&#13;
+// 当前module项目依赖的包&#13;
+require(&#13;
+ // dependency latest&#13;
+)&#13;
+&#13;
+// 排除第三方包&#13;
+exclude(&#13;
+// dependency latest&#13;
+)&#13;
+&#13;
+// 修改依赖包的路径或者版本&#13;
+// 当依赖包发生迁移&#13;
+// 原始包无法访问&#13;
+// 二次开发第三方包&#13;
+replace(&#13;
+ // source latest =&gt; target latest&#13;
+)&#13;
+&#13;
+// 撤回&#13;
+// 当前项目作为其他项目的依赖,如果说某个版本出现了问题&#13;
+// 可以通过retract撤回&#13;
+retract(&#13;
+ // v1.0.0&#13;
+)&#13;
+```。</description><guid isPermaLink="true">https://jiaokang.github.io/post/go%20mod%20-yi-lai-guan-li.html</guid><pubDate>Tue, 02 Apr 2024 14:32:38 +0000</pubDate></item><item><title>这是第一个测试博文</title><link>https://jiaokang.github.io/post/zhe-shi-di-yi-ge-ce-shi-bo-wen.html</link><description>这是第一个测试博文。</description><guid isPermaLink="true">https://jiaokang.github.io/post/zhe-shi-di-yi-ge-ce-shi-bo-wen.html</guid><pubDate>Tue, 26 Mar 2024 09:34:47 +0000</pubDate></item></channel></rss>
